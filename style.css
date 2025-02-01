@@ -1,0 +1,202 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.content-section {
+    padding: 3em;
+    margin-top: 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /* Stack on smaller screens */
+    align-items: center;
+    gap: 2em;
+}
+
+.about-image {
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1em; /* Space below text on small screens */
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+}
+
+.about-text {
+    text-align: center; /* Center text on smaller screens */
+}
+
+@media (min-width: 768px) { /* Larger screens */
+    .about-content {
+        flex-direction: row; /* Horizontal layout */
+        text-align: left; /* Align text left */
+    }
+    .about-image {
+        margin-top: 0; /* Remove margin from image */
+    }
+    .about-text {
+        flex: 1; /* Allow text to take up space */
+    }
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+nav.dark-mode {
+    background-color: #111;
+}
+
+nav.dark-mode a {
+    color: #ddd;
+}
+
+.content-section.dark-mode {
+    background-color: #444;
+    color: #eee;
+}
+
+body.dark-mode #theme-toggle {
+    color: #ddd;
+}
+
+/* Styles for contact links */
+#contact a {
+    color: blue; /* Default light mode color */
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #contact a {
+    color: white; /* White color in dark mode */
+}
+
+/* Project item styles (add as needed) */
+.project-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    /* bottom: 0;  You might not want this if you have a lot of content */
+    width: 100%;
+}
+
+/* ... (Your existing CSS) ... */
+
+/* Styles for blog items */
+.blog-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.blog-item h3 {
+    margin-top: 0;
+}
+
+/* ... (Your existing CSS) ... */
+
+/* Styles for blog items */
+.blog-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.blog-item h3 {
+    margin-top: 0;
+}
+
+/* Style the admin link */
+nav ul li a[href="/admin"] {
+    background-color: #007bff; /* Example color */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a[href="/admin"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
