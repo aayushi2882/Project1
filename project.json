@@ -1,0 +1,11 @@
+{
+    "projects": [
+      {
+        "title": "Portfolio Website",
+        "description": "A responsive portfolio with dynamic content.",
+        "image": "portfolio.png",
+        "link": "https://yourportfolio.com"
+      }
+    ]
+  }
+  
