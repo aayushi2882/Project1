@@ -3,20 +3,21 @@ const projectsContent = document.getElementById('projects-content');
 
 const educationItems = [
     {
+        
         title: 'Bachelor of Engineering',
         institution: 'Chandigarh University',
         dates: '2024-2028'
     },
-    // Add more education items here
+   
 ];
 
 const projectItems = [
     {
         title: 'Project 1',
         description: 'Cloning of amazon and zomato',
-        technologies: 'HTML, CSS, JavaScript'
+        technologies: 'HTML, CSS'
     },
-    // Add more project items here
+    
 ];
 
 function renderEducationItems() {
@@ -44,7 +45,7 @@ function renderProjectItems() {
 renderEducationItems();
 renderProjectItems();
 
-// Smooth scrolling for navigation links
+
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -59,14 +60,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Theme toggle functionality
+
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 const nav = document.querySelector('nav');
 const contentSections = document.querySelectorAll('.content-section');
 
-// Check for saved theme preference
+
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     body.classList.add(savedTheme);
@@ -81,7 +82,6 @@ themeToggle.addEventListener('click', () => {
     contentSections.forEach(section => section.classList.toggle('dark-mode'));
     updateThemeIcon();
 
-    // Save the theme preference to localStorage
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark-mode');
     } else {
@@ -99,16 +99,15 @@ function updateThemeIcon() {
     }
 }
 
-// ... (Your existing JavaScript) ...
 
 const blogsContent = document.getElementById('blogs-content');
 
-const blogItems = [  // Example blog data
+const blogItems = [  
     {
         title: 'My First Blog Post',
-        content: 'My core expertise lies in frontend development, but I’m always eager to explore new technologies. I have experience working with'
+        content: 'Hey there, tech enthusiasts! I am Aayushi Mishra, a passionate frontend developer, an active community member, and an aspiring innovator in the world of technology. My journey into the tech space has been nothing short of exciting, and I am here to share my experiences, skills, and aspirations with you!My core expertise lies in frontend development, but I’m always eager to explore new technologies. '
     },
-    // Add more blog items here
+   
 ];
 
 function renderBlogItems() {
@@ -121,11 +120,11 @@ function renderBlogItems() {
     blogsContent.innerHTML = blogsHtml;
 }
 
-renderBlogItems(); // Call the function to render blogs
+renderBlogItems(); 
 
 function typewriterEffect(element, text, speed) {
     let i = 0;
-    element.textContent = ""; // Clear initial text (if any)
+    element.textContent = ""; 
     const timer = setInterval(() => {
       element.textContent += text.charAt(i);
       i++;
@@ -137,26 +136,22 @@ function typewriterEffect(element, text, speed) {
   
   const textElement = document.getElementById('typed-text');
   const textToType = "This is the text I want to type.";
-  const typingSpeed = 30; // Milliseconds per character
+  const typingSpeed = 30;
   
   typewriterEffect(textElement, textToType, typingSpeed);
   
-  
-  // Example for multiple sentences (more advanced):
   const sentences = [
-    "First sentence.",
-    "Second sentence.",
-    "Third sentence."
+    "I'm a passionate front-end developer with a knack for creating user-friendly and visually appealing websites",
+    "I thrive on learning new technologies and collaborating with others to bring innovative ideas to life",
+    "Join me on my journey of continuous learning."
   ];
   
   let currentSentenceIndex = 0;
   
   function typeNextSentence() {
       typewriterEffect(textElement, sentences[currentSentenceIndex], typingSpeed);
-      currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length; // Loop back to the start
-      setTimeout(typeNextSentence, 2000); // Wait 2 seconds between sentences
+      currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length; 
+      setTimeout(typeNextSentence, 5000); 
   }
   
-  typeNextSentence(); // Start the typing effect
-
-// ... (Rest of your JavaScript) ...
+  typeNextSentence(); 
