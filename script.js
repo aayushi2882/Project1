@@ -123,4 +123,40 @@ function renderBlogItems() {
 
 renderBlogItems(); // Call the function to render blogs
 
+function typewriterEffect(element, text, speed) {
+    let i = 0;
+    element.textContent = ""; // Clear initial text (if any)
+    const timer = setInterval(() => {
+      element.textContent += text.charAt(i);
+      i++;
+      if (i > text.length) {
+        clearInterval(timer);
+      }
+    }, speed);
+  }
+  
+  const textElement = document.getElementById('typed-text');
+  const textToType = "This is the text I want to type.";
+  const typingSpeed = 30; // Milliseconds per character
+  
+  typewriterEffect(textElement, textToType, typingSpeed);
+  
+  
+  // Example for multiple sentences (more advanced):
+  const sentences = [
+    "First sentence.",
+    "Second sentence.",
+    "Third sentence."
+  ];
+  
+  let currentSentenceIndex = 0;
+  
+  function typeNextSentence() {
+      typewriterEffect(textElement, sentences[currentSentenceIndex], typingSpeed);
+      currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length; // Loop back to the start
+      setTimeout(typeNextSentence, 2000); // Wait 2 seconds between sentences
+  }
+  
+  typeNextSentence(); // Start the typing effect
+
 // ... (Rest of your JavaScript) ...
